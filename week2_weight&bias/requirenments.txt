@@ -1,0 +1,15 @@
+python preprocess_data.py \
+  --wandb_project wandb-server \
+  --wandb_entity rc7 \
+  --raw_data_path ./data \
+  --dest_path ./output
+
+  python train.py \
+  --wandb_project wandb-server \
+  --wandb_entity rc7 \
+  --data_artifact "rc7/wandb-server/NYC-Taxi:v0"
+
+    python sweep.py \
+  --wandb_project wandb-server \
+  --wandb_entity rc7 \
+  --data_artifact "rc7/wandb-server/NYC-Taxi:v0"
