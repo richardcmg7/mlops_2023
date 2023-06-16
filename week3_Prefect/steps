@@ -1,0 +1,7 @@
+# For use in codespace Not run prefect server executed in prefect cloud https://app.prefect.cloud/
+conda create -n prefect-ops python=3.9.12
+conda init bash
+conda activate prefect-ops
+prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+prefect server start
+prefect config set PREFECT_API_URL=https://richardcmg7-verbose-space-robot-7vxv76xjwgxfww4r-4200.preview.app.github.dev/flows
